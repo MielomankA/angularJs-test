@@ -2,12 +2,12 @@
 
 angular.module('intro').component('intro', {
   templateUrl: './intro/intro.template.html',
-  controller: [
-    'introCtrl',
-    function Intro(introCtrl) {
-      var self = this;
-    },
-  ],
+  // controller: [
+  //   'introCtrl',
+  //   function Intro(introCtrl) {
+  //     var self = this;
+  //   },
+  // ],
   // controller: [
   //   '$routeParams',
   //   'Phone',

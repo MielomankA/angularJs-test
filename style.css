@@ -36,7 +36,6 @@ body {
   background: url("../assets/img/intro-bg.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
   color: #ffffff;
   line-height: 1.2;
   display: flex;
@@ -87,12 +86,12 @@ body {
   transition: transform 0.5s;
 }
 
-.menu__link.menu__link_active {
+.menu__link_active {
   color: #aa9b77;
   cursor: default;
 }
 
-.menu__link.menu__link_active::after {
+.menu__link_active::after {
   width: 100%;
   transform: none;
 }
