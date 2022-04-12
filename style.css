@@ -23,27 +23,38 @@ body {
 
 .container {
   max-width: 1920px;
-  width: 100%;
-  height: 100vh;
   margin: 0 auto;
-  padding: 0 5vw;
 }
 
 .intro {
-  background-color: #345b8c;
-}
-
-.intro__container {
   background: url("../assets/img/intro-bg.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
+}
+.intro__container {
   color: #ffffff;
   line-height: 1.2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 4vh 0;
+  padding: 4vh 5vw;
+  height: 100vh;
+}
+.intro__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.intro__title {
+  text-align: center;
+  font-size: 60px;
+}
+.intro__description {
+  max-width: 500px;
+  text-align: center;
+  font-size: 20px;
 }
 
 .header {
@@ -51,9 +62,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0 5vw;
 }
-
 .header__logo {
   background: url("../assets/img/logo.png") no-repeat center;
   width: 53px;
@@ -64,18 +73,15 @@ body {
   display: flex;
   gap: 3vw;
 }
-
 .menu__item {
   list-style-type: none;
   position: relative;
 }
-
 .menu__link {
   text-decoration: none;
   font-size: 18px;
   color: #ffffff;
 }
-
 .menu__link::after {
   position: absolute;
   content: "";
@@ -88,70 +94,44 @@ body {
   transform-origin: right;
   transition: transform 0.5s;
 }
-
-.menu__link.menu__link_active {
+.menu__link_active {
   color: #aa9b77;
   cursor: default;
 }
-
-.menu__link.menu__link_active::after {
+.menu__link_active::after {
   width: 100%;
   transform: none;
 }
-
 .menu__link:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
-
 .menu__link:hover {
   color: #aa9b77;
 }
-
 .menu__svg_trolley {
   width: 24px;
   height: 20px;
   fill: #ffffff;
 }
-
 .menu__svg_trolley:hover {
   fill: #aa9b77;
-}
-
-.intro__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.title {
-  text-align: center;
-  font-size: 60px;
-}
-
-.intro__description {
-  max-width: 500px;
-  text-align: center;
-  font-size: 20px;
 }
 
 .arrow-down {
   position: relative;
 }
-
 .arrow-down__link {
   position: absolute;
   bottom: 0;
   transition: all 0.3s;
 }
-
 .arrow-down__link:hover {
   transform: translateY(5px);
 }
 
 @media screen and (max-width: 480px) {
-  .title {
+  .intro__title {
     font-size: 40px;
   }
 
