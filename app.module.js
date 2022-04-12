@@ -1,4 +1,4 @@
-var app = angular.module('testTask', ['intro', 'products']);
+var app = angular.module('testTask', ['intro', 'products', 'footerMenu']);
 
 // app.controller('productsCtrl', ['$scope', function ($scope) {
 
