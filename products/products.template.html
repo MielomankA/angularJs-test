@@ -1,5 +1,5 @@
-<section class="products">
-  <div class="products__control-panel">
+<section class="products" id="products">
+  <div class="products__control-panel container">
     <div class="products__checkbox-panel">
       <label ng-repeat="(category, _) in $ctrl.showCategory" class="products__label" htmlFor="{{category}}">
         <input
@@ -10,12 +10,12 @@
           ng-model="$ctrl.showCategory[category]"
           ng-change="$ctrl.changeFilter($ctrl.showCategory[category])"
         />
-        <p>{{category === 'child' ? 'CHILDROBOTOREN' : category.toUpperCase()}}</p>
+        <p>{{category === 'child' ? 'CHILDROBOTOREN' : category}}</p>
       </label>
     </div>
     <button class="products__button" ng-click="$ctrl.resetFilter()">See all prodRobotoucts</button>
   </div>
-  <div class="products__field" id="products__field">
+  <div class="products__field container">
     <div
       class="products__item"
       ng-repeat="item in $ctrl.data.items | filter:$ctrl.filterItem"
@@ -34,7 +34,7 @@
         <img src="{{$ctrl.getImageUrl(item.img)}}" alt="{{item.name}}" class="products__item_image" />
       </div>
       <div class="products__item_info">
-        <h3 class="products__item_name">{{item.name.toUpperCase()}}</h3>
+        <h3 class="products__item_name">{{item.name}}</h3>
         <p class="products__item_price">{{item.price}}€</p>
       </div>
     </div>

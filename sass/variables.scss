@@ -6,6 +6,7 @@ $gold: #aa9b77;
 $dark-grey: #333333;
 $grey: #cccccc;
 $middle-grey: #424242;
+$light-grayish-blue: #f5f6f7;
 
 $screen-max-width-biggest: 1440px;
 $screen-max-width-big: 1280px;
@@ -18,3 +19,9 @@ $screen-min-width-big: 1281px;
 $screen-min-width-medium: 1025px;
 $screen-min-width-small: 769px;
 $screen-min-width-smallest: 481px;
+
+@mixin box-shadow {
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
