@@ -123,6 +123,18 @@
 }
 
 @media screen and (max-width: $screen-max-width-smallest) {
+  .header__logo {
+    display: none;
+  }
+
+  .menu {
+    width: 100%;
+
+    &__list {
+      justify-content: space-around;
+    }
+  }
+
   .intro__title {
     font-size: 40px;
   }
