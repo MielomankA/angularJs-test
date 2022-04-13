@@ -1,1 +1,1 @@
-var app = angular.module('testTask', ['intro', 'products', 'footerMenu']);
+var app = angular.module('testTask', ['ngAnimate', 'intro', 'products', 'footerMenu']);

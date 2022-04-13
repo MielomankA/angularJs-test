@@ -206,6 +206,7 @@ body {
 }
 .products__field {
   padding: 7.5vh 0 23vh;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 2fr));
   gap: 2vh 3.5vw;
@@ -283,6 +284,28 @@ body {
     padding: 2.5vh 0 5vh;
   }
 }
+.animate-repeat {
+  box-sizing: border-box;
+}
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  transition: all linear 0.5s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  opacity: 0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
 @media screen and (max-width: 480px) {
   .products__control-panel {
     font-size: 14px;
