@@ -1,0 +1,32 @@
+@import '../sass/variables.scss';
+
+.footer-menu {
+  &__list {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__item {
+    list-style-type: none;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &__link:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  &__link:hover {
+    color: $gold;
+  }
+
+  &__separator {
+    color: $gold;
+  }
+}

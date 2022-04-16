@@ -1,0 +1,13 @@
+@import '../sass/variables.scss';
+
+.logo {
+  background: url('../assets/img/logo.png') no-repeat center;
+  width: 53px;
+  height: 40px;
+}
+
+@media screen and (max-width: $screen-max-width-smallest) {
+  .logo {
+    display: none;
+  }
+}

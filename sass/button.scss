@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+.button {
+  max-width: 204px;
+  width: 100%;
+  height: 52px;
+  background-color: $gold;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  color: $white;
+  cursor: pointer;
+
+  &:hover {
+    @include box-shadow;
+  }
+}
+
+@media screen and (max-width: $screen-max-width-smallest) {
+  .button {
+    font-size: 12px;
+  }
+}

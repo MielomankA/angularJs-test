@@ -1,0 +1,53 @@
+@import '../sass/variables.scss';
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+
+  &__checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: $white;
+    margin: 0;
+    font: inherit;
+    color: $gold;
+    width: 25px;
+    height: 25px;
+    border: 2px solid $grey;
+    border-radius: 3px;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+
+  &__checkbox:checked {
+    border: 2px solid $gold;
+  }
+
+  &__checkbox::before {
+    content: '';
+    width: 15px;
+    height: 20px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+  }
+
+  &__checkbox:checked::before {
+    content: url('../assets/img/check.png');
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: $screen-max-width-smallest) {
+  .label {
+    &__checkbox {
+      width: 20px;
+      height: 20px;
+    }
+
+    &__checkbox::before {
+      height: 14px;
+    }
+  }
+}

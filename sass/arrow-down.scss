@@ -1,0 +1,13 @@
+.arrow-down {
+  position: relative;
+
+  &__link {
+    position: absolute;
+    bottom: 0;
+    transition: all 0.3s;
+  }
+
+  &__link:hover {
+    transform: translateY(5px);
+  }
+}

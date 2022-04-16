@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('footerMenu').component('footerMenu', {
-  templateUrl: './footer/footerMenu.template.html',
-  controller: function menuCtrl() {
+angular.module('footerSection').component('footerSection', {
+  templateUrl: './footerSection/footerSection.template.html',
+  controller: function FooterMenuCtrl() {
     this.data = {
       footerMenu: [
         {

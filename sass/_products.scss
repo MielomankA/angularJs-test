@@ -1,7 +1,14 @@
-@import '../sass/variables.scss';
+@import './variables.scss';
+@import './label.scss';
+@import './button.scss';
+@import './card.scss';
 
 .products {
   &__control-panel {
+    background-color: $light-grayish-blue;
+  }
+
+  &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,68 +16,12 @@
     text-transform: uppercase;
     color: $dark-grey;
     padding: 4vh 5vw;
-    background-color: $light-grayish-blue;
     gap: 2.5vw;
   }
 
   &__checkbox-panel {
     display: flex;
     gap: 2.5vw;
-  }
-
-  &__label {
-    display: flex;
-    align-items: center;
-    gap: 1vw;
-  }
-
-  &__checkbox {
-    -webkit-appearance: none;
-    appearance: none;
-    background-color: $white;
-    margin: 0;
-    font: inherit;
-    color: $gold;
-    width: 25px;
-    height: 25px;
-    border: 2px solid $grey;
-    border-radius: 3px;
-    transform: translateY(-0.075em);
-    display: grid;
-    place-content: center;
-  }
-
-  &__checkbox:checked {
-    border: 2px solid $gold;
-  }
-
-  &__checkbox::before {
-    content: '';
-    width: 15px;
-    height: 20px;
-    transform: scale(0);
-    transition: 120ms transform ease-in-out;
-  }
-
-  &__checkbox:checked::before {
-    content: url('../assets/img/check.png');
-    transform: scale(1);
-  }
-
-  &__button {
-    max-width: 204px;
-    width: 100%;
-    height: 52px;
-    background-color: $gold;
-    border: none;
-    border-radius: 3px;
-    text-transform: uppercase;
-    color: $white;
-    cursor: pointer;
-  }
-
-  &__button:hover {
-    @include box-shadow;
   }
 
   &__field {
@@ -83,129 +34,36 @@
     align-items: center;
     min-height: 850px;
   }
-
-  &__item {
-    padding: 30px;
-    max-width: 320px;
-    width: 100%;
-    height: 378px;
-    background-color: $light-grayish-blue;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-transform: uppercase;
-    color: $middle-grey;
-    cursor: pointer;
-  }
-
-  &__item:hover {
-    @include box-shadow;
-  }
-
-  &__item_active {
-    outline: 6px solid $gold;
-  }
-
-  &__item_select {
-    border: none;
-    font-family: Roboto;
-    font-size: 18px;
-    text-transform: uppercase;
-    color: $middle-grey;
-    outline: none;
-  }
-
-  &__item_select:active {
-    border: none;
-    outline: none;
-  }
-
-  &__item_image-wrapper {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__item_image {
-    max-width: 145px;
-    height: 230px;
-    width: 100%;
-    object-fit: contain;
-  }
-
-  &__item_info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__item_name {
-    color: $gold;
-  }
-
-  &__item_price {
-    font-size: 22px;
-  }
-}
-
-.animate-repeat {
-  box-sizing: border-box;
-}
-
-.animate-repeat.ng-move,
-.animate-repeat.ng-enter,
-.animate-repeat.ng-leave {
-  transition: all linear 0.5s;
-}
-
-.animate-repeat.ng-leave.ng-leave-active,
-.animate-repeat.ng-move,
-.animate-repeat.ng-enter {
-  opacity: 0;
-}
-
-.animate-repeat.ng-leave,
-.animate-repeat.ng-move.ng-move-active,
-.animate-repeat.ng-enter.ng-enter-active {
-  opacity: 1;
 }
 
 @media screen and (max-width: $screen-max-width-small) {
-  .products__control-panel {
-    font-size: 16px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  .products {
+    &__container {
+      font-size: 16px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
-  .products__checkbox-panel {
-    flex-direction: column;
-  }
+    &__checkbox-panel {
+      flex-direction: column;
+    }
 
-  .products__field {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    padding: 2.5vh 0 5vh;
-    min-height: 500px;
+    &__field {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      padding: 2.5vh 0 5vh;
+      min-height: 500px;
+    }
   }
 }
 
 @media screen and (max-width: $screen-max-width-smallest) {
-  .products__control-panel {
-    font-size: 14px;
-  }
+  .products {
+    &__container {
+      font-size: 14px;
+    }
 
-  .products__checkbox {
-    width: 20px;
-    height: 20px;
-  }
-
-  .products__checkbox::before {
-    height: 14px;
-  }
-
-  .products__button {
-    font-size: 12px;
-  }
-
-  .products__field {
-    min-height: 500px;
+    &__field {
+      min-height: 500px;
+    }
   }
 }

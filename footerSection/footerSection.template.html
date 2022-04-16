@@ -1,0 +1,33 @@
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__top-content container">
+      <div class="logo-twitter"></div>
+      <p class="footer__top-descriprion">“ E-commerce psd theme available ”</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer__bottom-content container">
+      <div class="footer__bottom-left">
+        <h3 class="footer__title">Trekking</h3>
+        <p class="footer__bottom-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </p>
+      </div>
+      <div class="footer__bottom-right">
+        <nav class="footer-menu">
+          <ul class="footer-menu__list">
+            <li class="footer-menu__item" ng-repeat="footerItem in $ctrl.data.footerMenu">
+              <a class="footer-menu__link" href="{{footerItem.link}}" target="_blank" rel="noreferrer noopener"
+                >{{footerItem.name}}</a
+              >
+              <span class="footer-menu__separator">{{$last ? '' : '|'}}</span>
+            </li>
+          </ul>
+        </nav>
+        <p class="footer__bottom-design">Design by gianluca cosetta</p>
+      </div>
+    </div>
+  </div>
+</footer>

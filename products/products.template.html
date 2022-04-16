@@ -1,41 +1,38 @@
 <section class="products" id="products">
-  <div class="products__control-panel container">
-    <div class="products__checkbox-panel">
-      <label ng-repeat="(category, _) in $ctrl.showCategory" class="products__label" htmlFor="{{category}}">
-        <input
-          type="checkbox"
-          class="products__checkbox"
-          name="{{category}}"
-          id="{{category}}"
-          ng-model="$ctrl.showCategory[category]"
-          ng-change="$ctrl.changeFilter($ctrl.showCategory[category])"
-        />
-        <p>{{category === 'child' ? 'CHILDROBOTOREN' : category}}</p>
-      </label>
+  <div class="products__control-panel">
+    <div class="container products__container">
+      <div class="products__checkbox-panel">
+        <label ng-repeat="(category, _) in $ctrl.showCategory" class="label" htmlFor="{{category}}">
+          <input
+            type="checkbox"
+            class="label__checkbox"
+            name="{{category}}"
+            id="{{category}}"
+            ng-model="$ctrl.showCategory[category]"
+            ng-change="$ctrl.changeFilter($ctrl.showCategory[category])"
+          />
+          <p class="label__description">{{category === 'child' ? 'CHILDROBOTOREN' : category}}</p>
+        </label>
+      </div>
+      <button class="button" ng-click="$ctrl.resetFilter()">See all prodRobotoucts</button>
     </div>
-    <button class="products__button" ng-click="$ctrl.resetFilter()">See all prodRobotoucts</button>
   </div>
+
   <div class="products__field container">
     <div
-      class="products__item animate-repeat"
+      class="card animate-repeat"
       ng-repeat="item in $ctrl.data.items | filter:$ctrl.filterItem"
-      ng-init="activeClassItem=false"
-      ng-click="activeClassItem=!activeClassItem"
-      ng-class="{'products__item_active': activeClassItem}"
+      ng-init="activeCardClass=false"
+      ng-click="activeCardClass=!activeCardClass"
+      ng-class="{'card_active': activeCardClass}"
     >
-      <div>
-        <select name="" id="" class="products__item_select">
-          <option ng-repeat="option in item.options" value="{{option}}" class="products__item_option">
-            {{option}}
-          </option>
-        </select>
-      </div>
-      <div class="products__item_image-wrapper">
-        <img src="{{$ctrl.getImageUrl(item.img)}}" alt="{{item.name}}" class="products__item_image" />
-      </div>
-      <div class="products__item_info">
-        <h3 class="products__item_name">{{item.name}}</h3>
-        <p class="products__item_price">{{item.price}}€</p>
+      <select class="card__select">
+        <option ng-repeat="option in item.options" value="{{option}}" class="card__option">{{option}}</option>
+      </select>
+      <img src="{{$ctrl.getImageUrl(item.img)}}" alt="{{item.name}}" class="card__image" />
+      <div class="card__info">
+        <h3 class="card__name">{{item.name}}</h3>
+        <p class="card__price">{{item.price}}€</p>
       </div>
     </div>
   </div>
