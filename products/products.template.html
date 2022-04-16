@@ -29,7 +29,7 @@
       <select class="card__select">
         <option ng-repeat="option in item.options" value="{{option}}" class="card__option">{{option}}</option>
       </select>
-      <img src="{{$ctrl.getImageUrl(item.img)}}" alt="{{item.name}}" class="card__image" />
+      <img ng-src="{{$ctrl.getImageUrl(item.img)}}" alt="{{item.name}}" class="card__image" />
       <div class="card__info">
         <h3 class="card__name">{{item.name}}</h3>
         <p class="card__price">{{item.price}}€</p>
